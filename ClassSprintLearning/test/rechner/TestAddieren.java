@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class testAddieren {
+public class TestAddieren {
 
 	private Addieren addieren = new Addieren();
 	
