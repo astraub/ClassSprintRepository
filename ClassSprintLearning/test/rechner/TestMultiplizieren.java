@@ -10,9 +10,9 @@ public class TestMultiplizieren {
 	
 	@Test
 	public void testBerechnen() {
-		assertEquals(3, multiplizieren.berechnen(1, 2));
-		assertEquals(7, multiplizieren.berechnen(5, 2));
-		assertEquals(11, multiplizieren.berechnen(5, 6));
+		assertEquals(3, multiplizieren.berechnen(1, 3));
+		assertEquals(8, multiplizieren.berechnen(4, 2));
+		assertEquals(11, multiplizieren.berechnen(1, 11));
 		assertNotEquals(3, multiplizieren.berechnen(1, 1));
 		assertNotEquals(7, multiplizieren.berechnen(5, 1));
 		assertNotEquals(11, multiplizieren.berechnen(4, 6));

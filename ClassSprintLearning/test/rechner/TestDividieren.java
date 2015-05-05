@@ -15,7 +15,7 @@ public class TestDividieren {
 		assertEquals(11, dividieren.berechnen(66, 6));
 		assertNotEquals(3, dividieren.berechnen(2, 1));
 		assertNotEquals(7, dividieren.berechnen(5, 1));
-		assertNotEquals(11, dividieren.berechnen(67, 6));
+		assertNotEquals(11, dividieren.berechnen(50, 6));
 	}
 
 }
