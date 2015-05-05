@@ -26,4 +26,9 @@ public class Rechner {
 		this.rechenmethode = rechenmethode;
 	}
 	
+	public int termberechnung(int[] zahlen, char[] rechenzeichen)
+	{
+		return Termberechnung.berechnen(zahlen, rechenzeichen);
+	}
+	
 }
