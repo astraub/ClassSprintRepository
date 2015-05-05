@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class testSubtrahieren {
+public class TestSubtrahieren {
 
 	private Subtrahieren subtrahieren = new Subtrahieren();
 	

@@ -33,7 +33,7 @@ public class TestRechner {
 		assertEquals(3, result);
 		
 		//Verhaltensorientiertes Testen
-		//Mockito.verify(rechner).rechnen(1, 2);
+		Mockito.verify(rechenmethode).berechnen(1, 2);
 	}
 	
 	@Test
