@@ -14,6 +14,9 @@ public class TestRechner {
 	@Mock
 	Rechenmethode rechenmethode;
 	
+	@Mock
+	Termberechnung termberechnung;
+	
 	@InjectMocks
 	private Rechner rechner;
 	
@@ -54,6 +57,17 @@ public class TestRechner {
 		assertEquals(tempMethode, tempRechner.getRechenmethode());		
 	}
 	
-	
+	@Test
+	public void testTermberechnung(){
+		
+		char[] rechenzeichen = new char[]{'+','+','-'};
+		int[] zahlen = new int[]{4,3,2,1};
+		
+		Mockito.when(termberechnung.berechnen(zahlen, rechenzeichen)).thenReturn(8);
+		
+		assertEquals(rechner.termberechnung(zahlen, rechenzeichen), 8);
+		
+		Mockito.verify(termberechnung).berechnen(zahlen, rechenzeichen);
+	}
 	
 }
