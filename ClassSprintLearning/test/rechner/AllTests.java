@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ TestAddieren.class, TestDividieren.class,
-		TestMultiplizieren.class, TestRechner.class, TestSubtrahieren.class })
+		TestMultiplizieren.class, TestRechner.class, TestSubtrahieren.class, TestTermberechnung.class })
 public class AllTests {
 
 }
