@@ -17,8 +17,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/astraub/Documents/Git/junit/junit/4.12/junit-4.12.jar"/>
-	<classpathentry kind="lib" path="C:/Users/astraub/Documents/Git/mockito/mockito-all/1.10.19/mockito-all-1.10.19.jar"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
