@@ -4,7 +4,10 @@ public class Startklasse {
 
 	public static void main(String[] args) {
 		
-		Rechner rechner = new Rechner();
+		Rechner rechner;
+		
+		try{
+		rechner = new Rechner();
 		
 		Addieren rechenmethode = new Addieren();
 		
@@ -17,9 +20,14 @@ public class Startklasse {
 		
 		int[] zahlen = new int[]{4,3,2,1};
 		
+		rechner.setTermberechnung(new Termberechnung());
+		
 		System.out.println(rechner.termberechnung(zahlen, rechenzeichen));
 		
-		
+		} catch(Exception e)
+		{
+			e.printStackTrace();
+		}
 		
 	}
 

@@ -1,6 +1,7 @@
 package rechner;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,6 +17,9 @@ public class TestRechner {
 	
 	@Mock
 	Termberechnung termberechnung;
+	
+	@Mock
+	ErweiterteRechenmethoden quadratwurzel;
 	
 	@InjectMocks
 	private Rechner rechner;
@@ -77,6 +81,7 @@ public class TestRechner {
 		
 		assertEquals(rechner.termberechnung(zahlen, rechenzeichen), 8);
 		
+		//Verhaltensorientiertes Testen
 		Mockito.verify(termberechnung).berechnen(zahlen, rechenzeichen);
 	}
 	
@@ -96,6 +101,37 @@ public class TestRechner {
 		Rechner tempRechner = new Rechner();
 		tempRechner.setTermberechnung(tempMethode);
 		assertEquals(tempMethode, tempRechner.getTermberechnung());	
+	}
+	
+	public void testQuadratwurzel(){
+		
+		Mockito.when(rechner.quadratwurzel(9)).thenReturn(3.0);
+		
+		assertEquals(rechner.quadratwurzel(9), 3.0, 0.1);
+		
+		assertNotEquals(rechner.quadratwurzel(8), 2.0, 0.1);
+		
+		//Verhaltensorientiertes Testen
+		Mockito.verify(quadratwurzel).berechnen(9);
+		
+	}
+	
+	@Test
+	public void testSetQuadratwurzel()
+	{
+		ErweiterteRechenmethoden tempMethode = new Quadratwurzel();
+		Rechner tempRechner = new Rechner();
+		tempRechner.setQuadratwurzel(tempMethode);
+		assertEquals(tempMethode, tempRechner.getQuadratwurzel());
+	}
+	
+	@Test
+	public void testGetQuadratwurzel()
+	{
+		ErweiterteRechenmethoden tempMethode = new Quadratwurzel();
+		Rechner tempRechner = new Rechner();
+		tempRechner.setQuadratwurzel(tempMethode);
+		assertEquals(tempMethode, tempRechner.getQuadratwurzel());	
 	}
 	
 }

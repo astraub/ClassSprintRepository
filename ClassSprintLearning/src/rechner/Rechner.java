@@ -4,9 +4,17 @@ public class Rechner {
 
 	private Rechenmethode rechenmethode;
 	private Termberechnung termberechnung;
+	private ErweiterteRechenmethoden quadratwurzel;
 
 	public Rechner(){
 		
+	}
+	
+	public Rechner(Rechenmethode rechenmethode, Termberechnung termberechnung, ErweiterteRechenmethoden quadratwurzel) {
+		super();
+		this.rechenmethode = rechenmethode;
+		this.termberechnung = termberechnung;
+		this.quadratwurzel = quadratwurzel;
 	}
 	
 	public Rechner(Rechenmethode rechenmethode, Termberechnung termberechnung) {
@@ -44,6 +52,18 @@ public class Rechner {
 
 	public void setTermberechnung(Termberechnung termberechnung) {
 		this.termberechnung = termberechnung;
+	}
+	
+	public double quadratwurzel(int zahl){
+		return quadratwurzel.berechnen(zahl);
+	}
+
+	public ErweiterteRechenmethoden getQuadratwurzel() {
+		return quadratwurzel;
+	}
+
+	public void setQuadratwurzel(ErweiterteRechenmethoden quadratwurzel) {
+		this.quadratwurzel = quadratwurzel;
 	}
 
 }
