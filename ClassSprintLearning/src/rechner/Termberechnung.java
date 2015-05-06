@@ -1,12 +1,12 @@
 package rechner;
 
-public abstract class Termberechnung {
+public class Termberechnung {
 
-	public static int berechnen(int[] zahlen, char[] rechenzeichen) {
+	public int berechnen(int[] zahlen, char[] rechenzeichen) {
 
 		int result = zahlen[0];
 		
-		for (int i = 1; i < rechenzeichen.length; i++) {
+		for (int i = 1; i < zahlen.length; i++) {
 			switch (rechenzeichen[i-1]) {
 			case '+': result = result + zahlen[i];
 				
@@ -18,7 +18,5 @@ public abstract class Termberechnung {
 		}
 		return result;
 	}	
-	
-	//Hallo
 	
 }

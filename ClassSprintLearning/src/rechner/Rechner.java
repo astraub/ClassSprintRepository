@@ -3,9 +3,16 @@ package rechner;
 public class Rechner {
 
 	private Rechenmethode rechenmethode;
+	private Termberechnung termberechnung;
 
 	public Rechner(){
 		
+	}
+	
+	public Rechner(Rechenmethode rechenmethode, Termberechnung termberechnung) {
+		super();
+		this.rechenmethode = rechenmethode;
+		this.termberechnung = termberechnung;
 	}
 	
 	public Rechner(Rechenmethode rechenmethode) {
@@ -28,7 +35,15 @@ public class Rechner {
 	
 	public int termberechnung(int[] zahlen, char[] rechenzeichen)
 	{
-		return Termberechnung.berechnen(zahlen, rechenzeichen);
+		return termberechnung.berechnen(zahlen, rechenzeichen);
 	}
-	
+
+	public Termberechnung getTermberechnung() {
+		return termberechnung;
+	}
+
+	public void setTermberechnung(Termberechnung termberechnung) {
+		this.termberechnung = termberechnung;
+	}
+
 }

@@ -12,7 +12,9 @@ public class TestTermberechnung {
 		char[] rechenzeichen = new char[]{'+','+','-'};
 		int[] zahlen = new int[]{4,3,2,1};
 		
-		assertEquals(8, Termberechnung.berechnen(zahlen, rechenzeichen));
+		Termberechnung termberechnung = new Termberechnung();
+		
+		assertEquals(8, termberechnung.berechnen(zahlen, rechenzeichen));
 	}
 
 }
